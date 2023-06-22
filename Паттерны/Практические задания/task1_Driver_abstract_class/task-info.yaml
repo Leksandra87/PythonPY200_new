@@ -3,19 +3,19 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 880
-    length: 53
+  - offset: 1066
+    length: 52
     placeholder_text: "...  # TODO реализовать драйвер работы с текстовым файлом"
     initial_state:
       length: 57
       offset: 701
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def __init__(self, filename):
               self.filename = filename
-  - offset: 939
+  - offset: 1124
     length: 43
     placeholder_text: '# TODO реализовать метод чтения данных из файла'
     initial_state:
@@ -23,12 +23,12 @@ files:
       offset: 764
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def read(self) -> Iterable:
               with open(self.filename) as f:
                   return [int(line) for line in f]
-  - offset: 988
+  - offset: 1173
     length: 44
     placeholder_text: '# TODO реализовать метод записи в файл построчно'
     initial_state:
@@ -36,7 +36,7 @@ files:
       offset: 817
     initialized_from_dependency: false
     selected: true
-    status: Unchecked
+    status: Solved
     encrypted_possible_answer: |-
       def write(self, data: Iterable) -> None:
               with open(self.filename, "w") as f:
@@ -95,5 +95,11 @@ files:
   text: |
     [1, 2, 3]
   learner_created: false
-status: Unchecked
+- name: output.txt
+  visible: true
+  learner_created: true
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 22 Jun 2023 17:15:06 UTC"
 record: -1

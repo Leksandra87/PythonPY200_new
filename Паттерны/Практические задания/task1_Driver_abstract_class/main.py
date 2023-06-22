@@ -27,13 +27,15 @@ class SimpleFileDriver(IStructureDriver):
         self.filename = filename
 
     def read(self) -> Iterable:
-        pass
+        with open(self.filename) as f:
+            return [int(value.rstrip()) for value in f]
 
     def write(self, data: Iterable) -> None:
-        pass
+        with open(self.filename, 'w') as f:
+            for value in data:
+                f.write(str(value) + '\n')
 
-
-    ...  #  реализовать драйвер работы с текстовым файлом
+    ...  # реализовать драйвер работы с текстовым файлом
 
     #  реализовать метод чтения данных из файла
 
